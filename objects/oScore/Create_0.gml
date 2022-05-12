@@ -1,0 +1,1 @@
+the_score = 0;

@@ -3,6 +3,8 @@ if(instance_exists(oPlayer)){
 }
 image_angle = direction;
 if(hp <= 0) {
-with(oScore) the_score += 5;
-instance_destroy();
+	with(oScore) the_score += 5;
+	audio_sound_pitch(sndDeath,random_range(0.8,1.2));
+	audio_play_sound(sndDeath,0,false);
+	instance_destroy();
 }
